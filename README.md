@@ -1,6 +1,6 @@
 # Scheduler Container
 
-This container will run scheduled shell scripts inside `tasks/<interval>` where <interval> can be:
+This container will run scheduled shell scripts inside `scheduler/tasks/<interval>` where <interval> can be:
 
     - 1min
     - 5min
