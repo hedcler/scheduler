@@ -1,0 +1,20 @@
+#!/bin/sh
+
+SLACK_HOOK_URL='https://hooks.slack.com/services/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'
+
+SLACK_ICON='http://images.slackreview.com/logos/humblebot.png'
+SLACK_USERNAME='TestIntegration'
+
+SLACK_CHANNEL='#dev-test'
+
+SLACK_TITLE='Test Integration'
+
+CURRENT_TIME=$(date +"%T")
+SLACK_MESSAGE="Test minute by minute notification. Current UTC time: ${CURRENT_TIME}"
+
+
+
+curl -X POST \
+--data-urlencode "payload={\"attachments\": {\"fallback\": \"${SLACK_TITLE}\"},\"title\": \"${SLACK_TITLE}\",\"text\": \"${SLACK_MESSAGE}\",\"channel\": \"${SLACK_CHANNEL}\",\"username\": \"${SLACK_USERNAME}\",\"icon_url\": \"${SLACK_ICON}\"}}" \
+"${SLACK_HOOK_URL}"
+

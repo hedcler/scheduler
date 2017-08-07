@@ -1,0 +1,17 @@
+version: '2'
+services:
+  scheduler:
+    build: 
+      context: ./scheduler/
+      dockerfile: Dockerfile
+    volumes:
+      - ./scheduler/tasks/:/etc/periodic/
+    environment: 
+      - TZ=UTC
+    networks:
+      - default
+    restart: always
+
+networks:
+  default:
+    driver: bridge
