@@ -14,4 +14,4 @@ This container will run scheduled shell scripts inside `scheduler/tasks/<interva
 
 ## Example
 
-Inside `tasks/1min` you will see a example slack notification script.
+Inside `tasks/1min` you will see a example of slack notification script.
