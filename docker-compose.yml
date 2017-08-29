@@ -1,9 +1,11 @@
 version: '2'
 services:
   scheduler:
+    container_name: scheduler
     build: 
       context: ./scheduler/
       dockerfile: Dockerfile
+    privileged: true
     volumes:
       - ./scheduler/tasks/:/etc/periodic/
     environment: 
